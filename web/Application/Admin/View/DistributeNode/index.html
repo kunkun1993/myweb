@@ -1,0 +1,31 @@
+<extend name="Index/index" />
+<block name="main">
+    <style>
+        a{color:#0000ff;}
+        a:hover{text-decoration: none;color:red;}
+        .hi{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+        .th{font-weight: bold;color:#000;}
+    </style>
+        <div class="row">
+            <div class="col-md-12">
+                <center>
+                    <h2>为角色分配权限</h2>
+                    <br>
+                </center>
+            </div>
+        </div>
+        <div class="row th h4">
+            <div class="col-md-2">角色id</div>
+            <div class="col-md-2">角色名称</div>
+            <div class="col-md-2">权限名称</div>
+            <div class="col-md-2">操作</div>
+        </div>
+        <foreach name="data" item="val">
+            <div class="row h4">
+                <div class="col-md-2"><{$val.role_id}></div>
+                <div class="col-md-2"><{$val.rolename}></div>
+                <div class="col-md-2 hi" title="<{$val.nodename}>"><{$val.nodename}></div>
+                <div class="col-md-2"><a href="<{:U('DistributeNode/editnode',['id'=>$val['role_id']])}>">修改权限</a></div>
+            </div>
+        </foreach>
+</block>

@@ -1,0 +1,36 @@
+<extend name="Index/index" />
+<block name="main">
+    <style>
+        a{color:#0000ff;}
+        a:hover{text-decoration: none;color:red;}
+    </style>
+    <div class="row">
+        <div class="col-md-12">
+            <center>
+                <h2>角色设置</h2>
+                <br>
+                <a href="<{:U('Role/index')}>">首页</a>　|　　<a href="<{:U('Role/roleadd')}>">添加</a>
+            </center>
+        </div>
+    </div>
+    <br>
+        <table class="table">
+            <tr>
+                <th class="col-md-3"></th>
+                <th class="col-md-3">ID</th>
+                <th class="col-md-3">角色名称</th>
+                <th class="col-md-3">操作</th>
+            </tr>
+            <foreach name="data" item="v">
+                <tr>
+                    <td></td>
+                    <td><{$v.id}></td>
+                    <td><{$v.rolename}></td>
+                    <td>
+                        <a href="<{:U('Role/del',['id'=>$v['id']])}>">删除</a>
+                        <a href="<{:U('Role/edit',['id'=>$v['id']])}>">编辑</a>
+                    </td>
+                </tr>
+            </foreach>
+        </table>
+</block>

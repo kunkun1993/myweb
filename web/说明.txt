@@ -1,0 +1,16 @@
+后台入口文件
+控制器
+主页面
+Controller->IndexController.class.php
+view-> Index-> index.html
+登陆页面
+Controller-> LandController.class.php
+view-> Land-> 
+
+前台用户管理
+Controller-> MemberController.class.php
+view-> Member-> 
+
+后台用户管理
+Controller-> AdminController.class.php
+view-> Admin-> 

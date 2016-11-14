@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    
+        <!-- Basic -->
+        <meta charset="UTF-8" />
+
+        <title>Login | Fire - Admin Template</title>
+    
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
+        <!-- Favicon and touch icons -->
+        <!-- <link rel="shortcut icon" href="__PUBLIC__/assets/ico/favicon.ico" type="image/x-icon" /> -->
+        <!-- <link rel="apple-touch-icon" href="__PUBLIC__/assets/ico/apple-touch-icon.png" /> -->
+        <!-- <link rel="apple-touch-icon" sizes="57x57" href="__PUBLIC__/assets/ico/apple-touch-icon-57x57.png" /> -->
+        <!-- <link rel="apple-touch-icon" sizes="72x72" href="__PUBLIC__/assets/ico/apple-touch-icon-72x72.png" /> -->
+        <!-- <link rel="apple-touch-icon" sizes="76x76" href="__PUBLIC__/assets/ico/apple-touch-icon-76x76.png" /> -->
+        <!-- <link rel="apple-touch-icon" sizes="114x114" href="__PUBLIC__/assets/ico/apple-touch-icon-114x114.png" /> -->
+        <!-- <link rel="apple-touch-icon" sizes="120x120" href="__PUBLIC__/assets/ico/apple-touch-icon-120x120.png" /> -->
+        <!-- <link rel="apple-touch-icon" sizes="144x144" href="__PUBLIC__/assets/ico/apple-touch-icon-144x144.png" /> -->
+        <!-- <link rel="apple-touch-icon" sizes="152x152" href="__PUBLIC__/assets/ico/apple-touch-icon-152x152.png" /> -->
+        
+        <!-- start: CSS file-->
+        
+        <!-- Vendor CSS-->
+        <link href="__PUBLIC__/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- <link href="__PUBLIC__/assets/vendor/skycons/css/skycons.css" rel="stylesheet" /> -->
+        <!-- <link href="__PUBLIC__/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" /> -->
+        
+        <!-- Plugins CSS-->
+        <link href="__PUBLIC__/assets/plugins/bootkit/css/bootkit.css" rel="stylesheet" /> 
+        
+        <!-- Theme CSS -->
+        <link href="__PUBLIC__/assets/css/jquery.mmenu.css" rel="stylesheet" />
+        
+        <!-- Page CSS -->       
+        <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet" />
+        <!-- <link href="assets/css/add-ons.min.css" rel="stylesheet" /> -->
+        
+        <style>
+            footer {
+                display: none;
+            }
+        </style>
+        
+        <!-- end: CSS file-->   
+        
+        
+        <!-- Head Libs -->
+        <script src="__PUBLIC__/assets/plugins/modernizr/js/modernizr.js"></script>
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->        
+        
+    </head>
+
+    <body>
+        <!-- Start: Content -->
+        <div class="container-fluid content">
+            <div class="row">
+                <!-- Main Page -->
+                <div id="content" class="col-sm-12 full">
+                    <div class="row">
+                        <div class="login-box">
+                            <div class="panel">
+                                <div class="panel-body">                                
+                                    <div class="header bk-margin-bottom-20 text-center">                                        
+                                        <img src="__PUBLIC__/assets/img/logo.png" class="img-responsive" alt="" />
+                                        <h4>Log In</h4>
+                                    </div>      
+                                    <form class="form-horizontal login" action="<{:U('Land/dologin')}>" method="post">
+                                        <div class="bk-padding-left-20 bk-padding-right-20">
+                                            <div class="form-group">
+                        <!-- name -->
+                         <label>Username</label>
+                            <div class="input-group input-group-icon">
+                                <input type="text" class="form-control bk-radius" id="name" placeholder="Username" name="name" />
+                                <span class="input-group-addon">
+                                    <span class="icon" id="span1">
+                                        
+                                    </span>
+                                </span>
+                            </div>
+                                            </div>                                          
+                                            <div class="form-group">
+                        <!-- userpassword -->
+                                                <label>Username</label>
+                        <div class="input-group input-group-icon">
+                            <input type="password" name="password" class="form-control bk-radius" id="password" placeholder="Password"/>
+                            <span class="input-group-addon">
+                                <span class="icon">
+                                    
+                                </span>
+                            </span>
+                        </div>
+                                            </div>
+                                            <div class="row bk-margin-top-20 bk-margin-bottom-10">
+                                                <div class="col-sm-8">
+                                                    <div class="checkbox-custom checkbox-default">
+                                                        <input id="RememberMe" name="rememberme" type="checkbox" />
+                                                        <label for="RememberMe">Remember Me</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4 text-right">
+                                                    <button type="submit" class="btn btn-primary hidden-xs">Log In</button>
+                                                    <button type="submit" class="btn btn-primary btn-block btn-lg visible-xs bk-margin-top-20">Log In</button>
+                                                </div>
+                                            </div>
+                                            <div class="text-with-hr">
+                                                <span>or</span>
+                                            </div>                                          
+                                            <div class="text-center bk-margin-top-10 bk-margin-bottom-30">
+                                                <a class="btn btn-facebook bk-margin-bottom-15 bk-margin-5">Connect with <i class="fa fa-facebook"></i></a>
+                                                <a class="btn btn-twitter bk-margin-bottom-15 bk-margin-5">Connect with <i class="fa fa-twitter"></i></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+                </div>
+                <!-- End Main Page -->
+            </div>
+        </div><!--/container-->
+        <!-- start: JavaScript-->           
+        <script src="__PUBLIC__/assets/vendor/js/jquery-2.1.1.min.js"></script>
+        <!-- end: JavaScript-->
+        <script>
+            $(function(){
+                $('#name').blur(function(){
+                    $.ajax({
+                        type:'get',
+                        url:"<{:U('Land/ajaxlogin')}>",
+                        data:"name="+$('#name').val(),
+                        success:function(data){
+                            // console.log(data);
+                            $('#span1').html(data);
+                        }
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>

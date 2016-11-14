@@ -1,0 +1,34 @@
+<extend name="Index/index" />
+<block name="main">
+    <style>
+
+        a{color:#0000ff;}
+        a:hover{text-decoration: none;color:red;}
+        .hi{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+        .th{font-weight: bold;color:#000;}
+        h2{color:#222;}
+        th{color:#333;}
+    </style>
+    <div class="row">
+        <center><h2>为用户分配角色</h2></center>
+    </div>
+    <table class="table table-hover">
+        <tr>
+            <th class="col-md-2">用户ID</th>
+            <th>用户名</th>
+            <th>角色名</th>
+            <th>设置角色</th>
+        </tr>
+        <foreach name="data" item="val">
+            <tr>
+                <td><{$val.user_id}></td>
+                <td><{$val.user_name}></td>
+                <td class="col-md-4 hi"><{$val.role_name}></td>
+                <td>
+                    <a href="<{:U('DistributeRole/editrole',['id'=>$val['user_id']])}>">设置角色</a>
+                </td>
+            </tr>
+        </foreach>
+    </table>
+
+</block>

@@ -1,0 +1,61 @@
+<extend name="index/index" />
+<block name="main">
+    <form action="<{:U('Admin/doAdd')}>" method="post" class="form form-horizontal h4" style="font-family:华文行楷;">
+        <table class="table table-hover">
+            <center><caption><h2 style="color:#6666ee;">添加用户</h2></caption></center>
+            <tr>
+                <td align="right">姓名：</td>
+                <td class="col-md-6"><input type="text" name="name" class="form-control"></td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">密码：</td>
+                <td><input type="password" name="password" id="pwd" class="form-control"></td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">确认密码：</td>
+                <td><input type="password" id="check" class="form-control"></td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">联系方式：</td>
+                <td><input type="text" name="phone" class="form-control"></td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">年龄：</td>
+                <td><input type="text" name="age" class="form-control"></td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">邮箱：</td>
+                <td><input type="text" name="email" class="form-control"></td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">性别：</td>
+                <td>
+                    <input type="radio" name="sex" value="0" checked class="">女
+                    <input type="radio" name="sex" value="1" class="">男
+                    <input type="radio" name="sex" value="2" class="">保密
+                </td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">权限级别：</td>
+                <td>
+                    <input type="radio" value="0" name="state" checked class="">管理员
+                    <input type="radio" value="0" name="state" class="">最高管理员
+                </td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="添加" class="btn-primary form-control h4"></td>
+                <td><input type="reset" style="width:30%;" value="重置" class="btn-danger form-control h4"></td>
+                <td class="col-md-4"></td>
+            </tr>
+
+        </table>
+    </form>
+</block>

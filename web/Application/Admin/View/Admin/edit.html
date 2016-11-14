@@ -1,0 +1,61 @@
+<extend name="index/index" />
+<block name="main">
+    <style>
+        a{color:#0000ff;}
+        a:hover{text-decoration: none;color:red;}
+    </style>
+    <form action="<{:U('Admin/doEdit')}>" method="post" class="form form-horizontal h4" style="font-family:华文行楷;">
+        <input type="hidden" name="id" value="<{$data.id}>">
+        <table class="table table-hover">
+            <center><caption><h2 style="color:#6666ee;">添加用户</h2></caption></center>
+            <tr>
+                <td align="right">姓名：</td>
+                <td class="col-md-6"><input type="text" name="name" class="form-control" value="<{$data.name}>"></td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">密码：</td>
+                <td><a href="<{:U('admin/password',['id'=>$data['id']])}>">点此修改密码</a></td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">联系方式：</td>
+                <td><input type="text" name="phone" class="form-control" value="<{$data.phone}>"></td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">年龄：</td>
+                <td><input type="text" name="age" class="form-control" value="<{$data.age}>"></td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">邮箱：</td>
+                <td><input type="text" name="email" class="form-control" value="<{$data.email}>"></td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">性别：</td>
+                <td>
+                    <input type="radio" name="sex" value="0"<if condition="$data['sex'] eq 0">checked </if>>女
+                    <input type="radio" name="sex" value="1"<if condition="$data['sex'] eq 1">checked </if>>男
+                    <input type="radio" name="sex" value="2"<if condition="$data['sex'] eq 2">checked </if>>保密
+                </td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td align="right">权限级别：</td>
+                <td>
+                    <input type="radio" value="0" name="state" <if condition="$data['state'] eq 0">checked </if>>管理员
+                    <input type="radio" value="1" name="state" <if condition="$data['state'] eq 1">checked </if>>最高管理员
+                </td>
+                <td class="col-md-4"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="确认" class="btn-primary form-control h4"></td>
+                <td><input type="reset" style="width:30%;" value="重置" class="btn-danger form-control h4"></td>
+                <td class="col-md-4"></td>
+            </tr>
+
+        </table>
+    </form>
+</block>

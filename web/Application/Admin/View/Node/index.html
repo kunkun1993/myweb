@@ -1,0 +1,38 @@
+<extend name="Index/index" />
+<block name="main">
+    <style>
+        a{color:#0000ff;}
+        a:hover{text-decoration: none;color:red;}
+    </style>
+    <div class="row">
+        <div class="col-md-12">
+            <center>
+                <h2>权限设置</h2>
+                <br>
+                <a href="<{:U('Node/index')}>">首页</a>　|　　<a href="<{:U('Node/nodeadd')}>">添加</a>
+            </center>
+        </div>
+    </div>
+    <br>
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>项目</th>
+                <th>方法</th>
+                <th>操作</th>
+            </tr>
+            <foreach name="data" item="v">
+                <tr>
+                    <td><{$v.id}></td>
+                    <td><{$v.nodename}></td>
+                    <td><{$v.controller}></td>
+                    <td><{$v.action}></td>
+                    <td>
+                        <a href="<{:U('Node/del',['id'=>$v['id']])}>">删除</a>
+                        <a href="<{:U('Node/edit',['id'=>$v['id']])}>">编辑</a>
+                    </td>
+                </tr>
+            </foreach>
+        </table>
+</block>

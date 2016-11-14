@@ -1,0 +1,48 @@
+<extend name="Index/index" />
+<block name="main">
+    <style>
+        a{color:#0000ff;}
+        a:hover{text-decoration: none;color:red;}
+        .hi{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+        .th{font-weight: bold;color:#000;}
+        h2{font-weight: bold;color: #000;margin: 0;}
+    </style>
+        <div class="row">
+            <div class="col-md-12">
+                <center>
+                    <h2>分配权限</h2>
+                    <br>
+                </center>
+            </div>
+        </div>
+        <form action="<{:U('DistributeRole/doedit')}>" method="post">
+            <input type="hidden" name="user_id" value="<{$userid}>">
+            <div class="row">
+                <div class="col-md-2">
+                    <h2>勾选分配</h2>
+                </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <foreach name="data" item="v">
+                            <div class="col-md-3">
+                                <input type="checkbox" name="role_id[]" value="<{$v.id}>" <in name="v['id']" value="$roleid">checked</in> />
+                                <{$v.rolename}>
+                            </div>
+                        </foreach>
+                    </div> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3"><center>
+                    <input type="submit" class="btn btn-primary" value="确认">
+                </center></div>
+                <div class="col-md-3"><center>
+                    <input type="reset" class="btn btn-danger" value="重置">
+                </center></div>
+                <div class="col-md-3"></div>
+            </div>
+        </form>
+</block>
